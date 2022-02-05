@@ -16,8 +16,8 @@ img[name="background"] {
 
 .table-container {
   position: absolute;
-  bottom: 50%;
-  right: 55%;
+  bottom: 40%;
+  right: 45%;
   background-color: gray;
   max-width: 100%;
 }
