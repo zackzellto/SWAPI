@@ -2,6 +2,7 @@ body {
   background-image: url("../public/darth-vader-bg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  backdrop-filter: blur(8px);
   height: 100vh;
 }
 
@@ -17,4 +18,40 @@ h1 {
 .sw-table {
   position: relative;
   margin-top: 4em;
+}
+
+.search-bar {
+  position: relative;
+  margin-top: 4em;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin-left: 25%;
+}
+
+.popout {
+  animation: popout 1s ease;
+  -webkit-animation: popout 1s ease;
+}
+@keyframes popout {
+  from {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes popout {
+  from {
+    -webkit-transform: scale(0);
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
