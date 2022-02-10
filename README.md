@@ -1,4 +1,4 @@
-# React Expense Tracker
+# Star Wars API Search Application
 
 Star Wars API is an application that connects to an external API that houses Star Wars characters from all movies that you can search through and find numerous pieces of data about them. The data that this application displays is:
 
