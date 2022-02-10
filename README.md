@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# React Expense Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Star Wars API is an application that connects to an external API that houses Star Wars characters from all movies that you can search through and find numerous pieces of data about them. The data that this application displays is:
 
-## Available Scripts
+-Name
+-Birth Year
+-Height
+-Mass
+-Homeworld
+-Species
 
-In the project directory, you can run:
+[Heroku Link](https://zack-react-swapi-app.herokuapp.com/)
 
-### `npm start`
+## How It's Made
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Star Wars API application is built using the following:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-React
+-Bootstrap
+-Additional CSS
+-RESTful API
+-POSTman
+-Deployed to Heroku
 
-### `npm test`
+## UI
+![Star Wars API Landing Page](https://github.com/zackzellto/SWAPI/blob/master/swapi-landing-page.png?raw=true)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Star Wars API Search Active](https://github.com/zackzellto/SWAPI/blob/master/swapi-search-use.png?raw=true)
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. In the search bar, type the full name or any alpha-numeric character of the Star Wars character that you would like to retrieve data on.
+2. The application will retrieve the specified data from the external API in use and display it on the table according to the search results found.
+3. If it is a specific character, the application will display solely that output, if it is a alpha-numeric character the application will display all chracters that have the specific search input.
+4. If there are many options being displayed there is a pagination bar that will allow you to jump to a specific page of data, or you can sift through or go back via the "Prev" and "Next" buttons.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Hope you enjoy using the Star Wars API search application!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+Zack Zellto - [LinkedIn](https://www.linkedin.com/in/zackzellto/)
