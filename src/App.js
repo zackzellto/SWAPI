@@ -9,10 +9,11 @@ import { FormControl, Button, InputGroup } from "react-bootstrap";
 
 function App() {
 
-const [charName, setCharName] = useState("")
-const [charArr, setCharArr] = useState([])
-const [pageNumber, setPageNumber] = useState(1)
-const [pageCount, setPageCount] = useState("")
+const [pageNumber, setPageNumber] = useState(1);
+const [pageCount, setPageCount] = useState("");
+const [charName, setCharName] = useState("");
+const [charArr, setCharArr] = useState([]);
+
 
 const SWAPI_URL = "https://swapi.dev/api/people"
 
@@ -20,17 +21,14 @@ useEffect(() => {
   fetchChars();
 }, [pageNumber]);
 
-async function paginate(pageNum) {
-  let url;
-  if (charName === "") {
-    url = `${SWAPI_URL}?page=${pageNum}`;
-  } else {
-    url = `${SWAPI_URL}?search=${charName}&page=${pageNum}`;
-  }
-  const { data } = await axios.get(url);
-  getChars(data.results);
-}
 
+ async function getChars(chars) {
+  for (const char of chars) {
+    await getHomeworld(char);
+    await getSpecies(char);
+  }
+  setCharArr(chars);
+}
 async function fetchChars() {
   let url;
   if (charName === "") {
@@ -52,29 +50,6 @@ async function searchChar(e) {
   getChars(data.results);
 }
 
-async function getChars(chars) {
-  for (const char of chars) {
-    await getHomeworld(char);
-    await getSpecies(char);
-  }
-  setCharArr(chars);
-}
-
-async function pagnationClicks(button) {
-  if (button === "Next" && pageNumber < pageCount) {
-    setPageNumber(pageNumber + 1);
-  }
-
-  if (button === "Prev" && pageNumber > 1) {
-    setPageNumber(pageNumber - 1);
-  }
-}
-
-async function getHomeworld(char) {
-  const { data } = await axios.get(char.homeworld);
-  char.homeworld = data.name;
-}
-
 async function getSpecies(char) {
   if (!char.species.length) {
     char.species = "Human";
@@ -83,6 +58,34 @@ async function getSpecies(char) {
     char.species = data.name;
   }
 }
+
+async function getHomeworld(char) {
+  const { data } = await axios.get(char.homeworld);
+  char.homeworld = data.name;
+}
+
+async function paginationClicks(buttonName) {
+  if (buttonName === "Next" && pageNumber < pageCount) {
+    setPageNumber(pageNumber + 1);
+  }
+
+  if (buttonName === "Prev" && pageNumber > 1) {
+    setPageNumber(pageNumber - 1);
+  }
+}
+
+async function paginate(pageNum) {
+  let url;
+  if (charName === "") {
+    url = `${SWAPI_URL}?page=${pageNum}`;
+  } else {
+    url = `${SWAPI_URL}?search=${charName}&page=${pageNum}`;
+  }
+  const { data } = await axios.get(url);
+  getChars(data.results);
+}
+
+
 
   return (
     <div className="App">
@@ -108,7 +111,7 @@ async function getSpecies(char) {
           <SwPagination 
           pageCount={pageCount}
           paginate={paginate}
-          pagnationClicks={pagnationClicks}
+          paginationClicks={paginationClicks}
           setPageNumber={setPageNumber}/>
         </div>
       </div>
