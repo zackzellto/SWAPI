@@ -19,7 +19,6 @@ The Star Wars API application is built using the following:
 -Bootstrap
 -Additional CSS
 -RESTful API
--POSTman
 -Deployed to Heroku
 
 ## UI
